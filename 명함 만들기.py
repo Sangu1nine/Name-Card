@@ -57,14 +57,14 @@ while True:
 # 예외 처리를 if에서 잘못된점이 발견되어 while로 수정함 14:19 jjw
 
         while True:
-        card_num = input('수정할 명함 번호 입력 > ')
+            card_num = input('수정할 명함 번호 입력 > ')
 
         # 명함 번호가 유효한지 확인
-        if 1 <= int(card_num) <= len(card):
-            card_num = int(card_num)  # 유효한 명함 번호가 입력되었을 경우
-            break
-        else:
-            print("해당 번호가 없습니다. 다시 입력해주세요.")  # 존재하지 않는 번호일 경우
+            if 1 <= int(card_num) <= len(card):
+                card_num = int(card_num)  # 유효한 명함 번호가 입력되었을 경우
+                break
+            else:
+                print("해당 번호가 없습니다. 다시 입력해주세요.")  # 존재하지 않는 번호일 경우
 
         # 예외처리가 없어서 추가 했음(71~78) 14:22 jjw
         # 수정할 부분 번호 입력 받기
@@ -75,7 +75,7 @@ while True:
             if 1 <= number <= 4:
                 break  # 유효한 입력이 들어오면 루프 종료
             else:
-                print("잘못된 번호입니다. 1~4 사이의 번호를 입력해주세요.")  # 잘못된 번호 입력 시 메시지 출력
+            print("잘못된 번호입니다. 1~4 사이의 번호를 입력해주세요.")  # 잘못된 번호 입력 시 메시지 출력
 
         # 명함 수정
         if number == 1:
