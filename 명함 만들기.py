@@ -31,3 +31,20 @@ while menu != '5':
         card.append([name,email,tel,belong])
         card[len(card)-1].insert(0,len(card))
         print("명함이 입력되었습니다", card)
+
+        elif menu == 2 :
+        print(card, "\n", card_display)
+        card_num = input('수정할 명함 번호 입력 >')
+        if int(card_num)-1 > card[-1][0] :
+            print("해당 번호가 없습니다.")
+            card_num = input('수정할 명함 번호 입력 >')
+        number = int(input('수정할 부분 >'))
+        if number == 1 :
+            card[int(card_num)-1][0] = input('수정할 이름 입력>')
+        if number == 2 :
+            card[int(card_num)-1][1] = input('수정할 이메일 주소 입력 >')
+        if number == 3 :
+            card[int(card_num)-1][2] = input('수정할 전화번호 입력 >')
+        if number == 4 :
+            card[int(card_num)-1][3] = input('수정할 직장 또는 학교 입력 >')
+        print("명함이 수정되었습니다", card[int(card_num)-1])
