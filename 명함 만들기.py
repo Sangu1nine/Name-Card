@@ -90,13 +90,13 @@ while True:
                 print("잘못된 번호입니다. 1~5 사이의 번호를 입력해주세요.")
 
         if number == 1:
-            del card[card_num - 1][1]
+            card[card_num - 1][1] = "None"
         elif number == 2:
-            del card[card_num - 1][2]
+            card[card_num - 1][2] = "None"
         elif number == 3:
-            del card[card_num - 1][3]
+            card[card_num - 1][3] = "None"
         elif number == 4:
-            del card[card_num - 1][4]
+            card[card_num - 1][4] = "None"
         elif number == 5:
             del card[card_num - 1]
 
