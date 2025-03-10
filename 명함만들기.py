@@ -102,9 +102,19 @@ while True:
 
         print("명함이 삭제되었습니다:", card)
 
-    # 4. 명함 목록 보기
     elif menu == '4':
-        print(card)
+        if not card:
+            print("저장된 명함이 없습니다.")
+        else:
+            print("\n==================== 명함 목록 ====================")
+            for c in card:
+                print(f"번호: {c[0]}")
+                print(f"이름: {c[1]}")
+                print(f"이메일: {c[2]}")
+                print(f"전화번호: {c[3]}")
+                print(f"직장/학교: {c[4]}")
+                print("--------------------------------------------------")
+
 
     # 5. 종료
     elif menu == '5':
