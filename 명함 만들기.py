@@ -43,7 +43,7 @@ while True:
         while True:
             card_num = input('수정할 명함 번호 입력 > ')
 
-            if card_num.isdigit() and 1 <= int(card_num) <= len(card):
+            if 1 <= int(card_num) <= len(card):
                 card_num = int(card_num)
                 break
             else:
@@ -75,7 +75,7 @@ while True:
         while True:
             card_num = input('삭제할 명함의 번호 입력 > ')
 
-            if card_num.isdigit() and 1 <= int(card_num) <= len(card):
+            if 1 <= int(card_num) <= len(card):
                 card_num = int(card_num)
                 break
             else:
